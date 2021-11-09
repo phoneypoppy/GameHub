@@ -1,35 +1,25 @@
 <template>
+  <div class="container">
+
+  <Searchbar/>
   <div class="blog-card-wrap">
-    <div class="blog-cards container">
-      <div v-if="profileAdmin" class="toggle-edit">
-        <span>Toggle Editing Post</span>
-        <input type="checkbox" v-model="editPost" />
-      </div>
+    <div class="blog-cards">    
       <BlogCard :post="post" v-for="(post, index) in blogPosts" :key="index" />
     </div>
+  </div>
   </div>
 </template>
 
 <script>
 import BlogCard from "../components/BlogCard";
+import Searchbar from "../components/Searchbar";
 export default {
   name: "blogs",
-  components: { BlogCard },
+  components: { BlogCard, Searchbar },
   computed: {
     blogPosts() {
       return this.$store.state.blogPosts;
     },
-    editPost: {
-      get() {
-        return this.$store.state.editPost;
-      },
-      set(payload) {
-        this.$store.commit("toggleEditPost", payload);
-      },
-    },
-  },
-  beforeDestroy() {
-    this.$store.commit("toggleEditPost", false);
   },
 };
 </script>
@@ -78,6 +68,87 @@ export default {
     input:checked[type="checkbox"]:before {
       background: #fff;
       left: 52px;
+    }
+  }
+}
+html, body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+div#app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+  .search-wrapper {
+    position: relative;
+    label {
+      position: absolute;
+      font-size: 12px;
+      color: rgba(0,0,0,.50);
+      top: 8px;
+      left: 12px;
+      z-index: -1;
+      transition: .15s all ease-in-out;
+    }
+    input {
+      padding: 4px 12px;
+      color: rgba(0,0,0,.70);
+      border: 1px solid rgba(0,0,0,.12);
+      transition: .15s all ease-in-out;
+      background: white;
+      &:focus {
+        outline: none;
+        transform: scale(1.05);
+        & + label  {
+          font-size: 10px;
+          transform: translateY(-24px) translateX(-12px);
+        }
+      }
+      &::-webkit-input-placeholder {
+          font-size: 12px;
+          color: rgba(0,0,0,.50);
+          font-weight: 100;
+      }
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    max-width: 444px;
+    flex-wrap: wrap;
+    padding-top: 12px;
+  }
+
+  .card {
+    box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+    max-width: 124px;
+    margin: 12px;
+    transition: .15s all ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+    a {
+      text-decoration: none;
+      padding: 12px;
+      color: #03A9F4;
+      font-size: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        height: 100px;
+      }
+      small {
+        font-size: 10px;
+        padding: 4px;
+      }
     }
   }
 }
