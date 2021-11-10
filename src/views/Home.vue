@@ -4,7 +4,7 @@
     <!-- <BlogPost :post="post" v-for="(post, index) in blogPostsFeed" :key="index" /> -->
     <div class="blog-card-wrap">
       <div class="container">
-        <h3>View More Recent Blogs</h3>
+        <h3>View More Recent games</h3>
         <div class="blog-cards">
           <BlogCard :post="post" v-for="(post, index) in blogPostsCards" :key="index" />
         </div>
@@ -12,7 +12,7 @@
     </div>
     <div v-if="!user" class="updates">
       <div class="container">
-        <h2>Never miss a post. Register for your free account today!</h2>
+        <h2>Never miss a game. Register for your free account today!</h2>
         <router-link class="router-button" to="#">Register for GameHub<Arrow class="arrow arrow-light" /> </router-link>
       </div>
     </div>
