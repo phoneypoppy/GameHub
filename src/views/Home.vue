@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <BlogPost v-if="!user" :post="welcomeScreen" />
-    <BlogPost :post="post" v-for="(post, index) in blogPostsFeed" :key="index" />
+    <!-- <BlogPost :post="post" v-for="(post, index) in blogPostsFeed" :key="index" /> -->
     <div class="blog-card-wrap">
       <div class="container">
         <h3>View More Recent Blogs</h3>
@@ -12,8 +12,8 @@
     </div>
     <div v-if="!user" class="updates">
       <div class="container">
-        <h2>never miss a post. Register for your free account today!</h2>
-        <router-link class="router-button" to="#"> Register for GameHub<Arrow class="arrow arrow-light" /> </router-link>
+        <h2>Never miss a post. Register for your free account today!</h2>
+        <router-link class="router-button" to="#">Register for GameHub<Arrow class="arrow arrow-light" /> </router-link>
       </div>
     </div>
   </div>
@@ -31,9 +31,9 @@ export default {
       welcomeScreen: {
         title: "Welcome!",
         blogPost:
-          "Weekly blog articles with all things programming including HTML, CSS, JavaScript and more. Register today to never miss a post!",
+          "Register today to share your love for your favourtie games!",
         welcomeScreen: true,
-        photo: "coding",
+        photo: "welcome2",
       },
     };
   },
@@ -60,6 +60,7 @@ export default {
   }
 }
 
+
 .updates {
   .container {
     padding: 100px 25px;
@@ -73,11 +74,12 @@ export default {
 
     .router-button {
       display: flex;
-      font-size: 14px;
+      font-size: 20px;
       text-decoration: none;
       @media (min-width: 800px) {
         margin-left: auto;
       }
+      background-color: #073b4c;
     }
 
     h2 {
