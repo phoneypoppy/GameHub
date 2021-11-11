@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <BlogPost v-if="!user" :post="welcomeScreen" />
-    <!-- <BlogPost :post="post" v-for="(post, index) in blogPostsFeed" :key="index" /> -->
+    <BlogPost :post="post" v-for="(post, index) in blogPostsFeed" :key="index" /> 
     <div class="blog-card-wrap">
       <div class="container">
         <h3>View More Recent games</h3>
