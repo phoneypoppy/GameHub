@@ -1,77 +1,44 @@
 <template>
-  <div class="container">
-
-  <Searchbar/>
-  <div class="blog-card-wrap">
-    <div class="blog-cards">    
-      <BlogCard :post="post" v-for="(post, index) in blogPosts" :key="index" />
-    </div>
-  </div>
+  <div id="app">
+    <input v-model="searchQuery">
+    <div v-for="r of resultQuery" :key="r.id">{{r.title}}</div>
   </div>
 </template>
-
 <script>
-import BlogCard from "../components/BlogCard";
-import Searchbar from "../components/Searchbar";
 export default {
-  name: "blogs",
-  components: { BlogCard, Searchbar },
-  computed: {
-    blogPosts() {
-      return this.$store.state.blogPosts;
-    },
+  name: "App",
+  data() {
+    return {
+      searchQuery: null,
+      resources: [
+        { id: 1, title: "javascript for dummies" },
+        { id: 2, title: "vue for dummies" },
+        { id: 3, title: "dos for dummies" },
+        { id: 4, title: "windows for dummies" },
+        { id: 5, title: "html for dummies" }
+      ]
+    };
   },
+  computed: {
+    resultQuery() {
+      if (this.searchQuery) {
+        return this.resources.filter(item => {
+          return this.searchQuery
+            .toLowerCase()
+            .split(" ")
+            .every(v => item.title.toLowerCase().includes(v));
+        });
+      } else {
+        return this.resources;
+      }
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-.blog-cards {
-  position: relative;
 
-  .toggle-edit {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: -70px;
-    right: 0;
-
-    span {
-      margin-right: 16px;
-    }
-
-    input[type="checkbox"] {
-      position: relative;
-      border: none;
-      -webkit-appearance: none;
-      background: #fff;
-      outline: none;
-      width: 80px;
-      height: 30px;
-      border-radius: 20px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    }
-
-    input[type="checkbox"]:before {
-      content: "";
-      position: absolute;
-      width: 30px;
-      height: 30px;
-      border-radius: 20px;
-      top: 0;
-      left: 0;
-      background: #303030;
-      transform: scale(1.1);
-      transition: 750ms ease all;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    }
-
-    input:checked[type="checkbox"]:before {
-      background: #fff;
-      left: 52px;
-    }
-  }
-}
-html, body {
+    html, body {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -151,5 +118,22 @@ div#app {
       }
     }
   }
+
+
+
+  .hotpink {
+    background: hotpink;
+  }
+
+  .green {
+    background: green;
+  }
+
+  .box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgba(0,0,0,.12);
+  }
 }
+
 </style>

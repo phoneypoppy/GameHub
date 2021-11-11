@@ -4,11 +4,6 @@
        <div class="branding">
                 <router-link  :to="{ name: 'Home' }" class="header"><!--img src="..\GameHub\src\assets\logo.jpg"-->GameHub</router-link>
             </div>
-            <!--added a search menu
-            <div class="wrapper">
-                <input type="search" id="search" autocomplete="off" spellcheck="false" placeholder="Enter a search term" class="input link">
-            </div>
-            -->
       <div class="nav-links">
         <ul v-show="!mobile">
           <router-link class="link" :to="{ name: 'Home' }">Home</router-link>
@@ -300,5 +295,7 @@ header {
   .mobile-nav-leave-to {
     transform: translateX(-250px);
   }
+
 }
+
 </style>
