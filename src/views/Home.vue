@@ -4,7 +4,7 @@
     <Post :post="post" v-for="(post, index) in blogPostsFeed" :key="index" /> 
     <div class="blog-card-wrap">
       <div class="container">
-        <h3>View More Recent games</h3>
+        <h3>View More Recent posts</h3>
         <div class="blog-cards">
           <BlogCard :post="post" v-for="(post, index) in blogPostsCards" :key="index" />
         </div>
