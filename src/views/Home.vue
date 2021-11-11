@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <Recommend />
     <Post v-if="!user" :post="welcomeScreen" />
     <Post :post="post" v-for="(post, index) in blogPostsFeed" :key="index" /> 
     <div class="blog-card-wrap">
@@ -23,9 +24,10 @@
 import Post from "../components/Post";
 import BlogCard from "../components/BlogCard";
 import Arrow from "../assets/Icons/arrow-right-light.svg";
+import Recommend from "../components/Recommend";
 export default {
   name: "Home",
-  components: { Post, BlogCard, Arrow },
+  components: { Post, BlogCard, Arrow, Recommend },
   data() {
     return {
       welcomeScreen: {
