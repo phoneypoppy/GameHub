@@ -25,11 +25,11 @@ export default new Vuex.Store({
     profileInitials: null,
   },
   getters: {
-    blogPostsFeed(state) {
+    /*blogPostsFeed(state) {
       return state.blogPosts.slice(0, 2);
-    },
+    },*/
     blogPostsCards(state) {
-      return state.blogPosts.slice(2, 6);
+      return state.blogPosts.slice(0, 6);
     },
   },
   mutations: {

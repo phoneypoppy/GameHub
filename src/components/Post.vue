@@ -4,9 +4,9 @@
       <div>
         <h2 v-if="post.welcomeScreen">{{ post.title }}</h2>
         <h2 v-else>{{ post.blogTitle }}</h2>
-        <p v-if="post.welcomeScreen">{{ post.blogPost }}</p>
+        <p v-if="post.welcomeScreen">{{ post.Post }}</p>
         <p class="content-preview" v-else v-html="post.blogHTML"></p>
-        <router-link class="link link-light" v-if="post.welcomeScreen" to="#">
+        <router-link class="link link-light" v-if="post.welcomeScreen" :to="{ name: 'Login' }">
           Login/Register<Arrow class="arrow arrow-light" />
         </router-link>
         <router-link class="link" v-else :to="{ name: 'ViewBlog', params: { blogid: this.post.blogID } }">
@@ -24,7 +24,7 @@
 <script>
 import Arrow from "../assets/Icons/arrow-right-light.svg";
 export default {
-  name: "blogPost",
+  name: "Post",
   props: ["post"],
   components: {
     Arrow,
@@ -67,8 +67,8 @@ export default {
         padding: 0 24px;
       }
       h2 {
-        font-size: 32px;
-        font-weight: 300;
+        font-size: 35px;
+        font-weight: 380;
         text-transform: uppercase;
         margin-bottom: 24px;
         @media (min-width: 700px) {
@@ -95,6 +95,8 @@ export default {
         padding-bottom: 4px;
         border-bottom: 1px solid transparent;
         transition: 0.5s ease-in all;
+        font-size: 21px;
+        font-weight: bold;
         &:hover {
           border-bottom-color: #303030;
         }
@@ -134,7 +136,7 @@ export default {
 }
 .no-user:first-child {
   .blog-content {
-    background-color: #303030;
+    background-color: #52796f;
     color: #fff;
   }
 }

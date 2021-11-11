@@ -1,11 +1,11 @@
 <template>
   <div class="home">
     <Recommend />
-    <BlogPost v-if="!user" :post="welcomeScreen" />
-    <BlogPost :post="post" v-for="(post, index) in blogPostsFeed" :key="index" />
+    <Post v-if="!user" :post="welcomeScreen" />
+    <Post :post="post" v-for="(post, index) in blogPostsFeed" :key="index" /> 
     <div class="blog-card-wrap">
       <div class="container">
-        <h3>View More Recent Blogs</h3>
+        <h3>View More Recent posts</h3>
         <div class="blog-cards">
           <BlogCard :post="post" v-for="(post, index) in blogPostsCards" :key="index" />
         </div>
@@ -13,29 +13,29 @@
     </div>
     <div v-if="!user" class="updates">
       <div class="container">
-        <h2>never miss a post. Register for your free account today!</h2>
-        <router-link class="router-button" to="#"> Register for GameHub<Arrow class="arrow arrow-light" /> </router-link>
+        <h2>Never miss a game. Register for your free account today!</h2>
+        <router-link class="router-button" :to="{ name: 'Register' }">Register for GameHub<Arrow class="arrow arrow-light" /> </router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import BlogPost from "../components/BlogPost";
+import Post from "../components/Post";
 import BlogCard from "../components/BlogCard";
 import Arrow from "../assets/Icons/arrow-right-light.svg";
 import Recommend from "../components/Recommend";
 export default {
   name: "Home",
-  components: { BlogPost, BlogCard, Arrow, Recommend },
+  components: { Post, BlogCard, Arrow, Recommend },
   data() {
     return {
       welcomeScreen: {
         title: "Welcome!",
         blogPost:
-          "Weekly blog articles with all things programming including HTML, CSS, JavaScript and more. Register today to never miss a post!",
+          "Register today to share your love for your favourtie games!",
         welcomeScreen: true,
-        photo: "coding",
+        photo: "welcome2",
       },
     };
   },
@@ -62,6 +62,7 @@ export default {
   }
 }
 
+
 .updates {
   .container {
     padding: 100px 25px;
@@ -75,11 +76,12 @@ export default {
 
     .router-button {
       display: flex;
-      font-size: 14px;
+      font-size: 20px;
       text-decoration: none;
       @media (min-width: 800px) {
         margin-left: auto;
       }
+      background-color: #073b4c;
     }
 
     h2 {

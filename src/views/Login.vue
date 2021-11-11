@@ -1,11 +1,15 @@
 <template>
     <div class="form-wrap">
         <form class="login">
+            <p>
+
+            Back to <router-link :to="{ name: 'Home' }">Home page</router-link>
+            </p>
             <p class="login-register">
                 Don't have an account?
                 <router-link class="router-link" :to="{name: 'Register' }">Register</router-link>
             </p>
-            <h2>Login to GameBlog</h2>
+            <h2>Login to GameHub</h2>
             <div class="inputs">
                 <div class="input">
                     <input type="text" placeholder="Email" v-model="email" />
