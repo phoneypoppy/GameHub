@@ -13,7 +13,7 @@
     <div v-if="!user" class="updates">
       <div class="container">
         <h2>Never miss a game. Register for your free account today!</h2>
-        <router-link class="router-button" to="#">Register for GameHub<Arrow class="arrow arrow-light" /> </router-link>
+        <router-link class="router-button" :to="{ name: 'Register' }">Register for GameHub<Arrow class="arrow arrow-light" /> </router-link>
       </div>
     </div>
   </div>
