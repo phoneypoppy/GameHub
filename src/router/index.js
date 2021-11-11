@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Blogs from "../views/Blogs.vue";
+import Posts from "../views/Posts.vue";
 import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 import ForgotPassword from "../views/ForgotPassword.vue";
@@ -25,11 +25,11 @@ const routes = [
     },
   },
   {
-    path: "/blogs",
-    name: "Blogs",
-    component: Blogs,
+    path: "/posts",
+    name: "Posts",
+    component: Posts,
     meta: {
-      title: "Blogs",
+      title: "Posts",
       requiresAuth: false,
     },
   },
