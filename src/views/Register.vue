@@ -1,11 +1,10 @@
 <template>
     <div class ="form-wrap">
         <form class ="register">
-            <p class = "login-register">
-
+            <p> 
                 Back to <router-link :to="{ name: 'Home' }">Home page</router-link>
-                <br/>
-
+            </p>
+            <p class = "login-register">
                 Already have an account?
                 <router-link class ="router-link" :to="{name: 'Login'}">Login</router-link>
             </p>
