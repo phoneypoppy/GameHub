@@ -17,7 +17,7 @@
                         <li> 
                             <a href="#"><linkedin class="svg-icon"/></a>
                         </li> 
-                    </ul--> 
+                    </ul>  -->
                 </div>
                 <div class="col-2">
                     <ul>
@@ -41,14 +41,15 @@
 import twitter from "../assets/Icons/twitter-brands.svg";
 import instagram from "../assets/Icons/instagram-brands.svg";
 import linkedin from "../assets/Icons/linkedin-brands.svg";*/
+
 export default {
     name : "footer-vue",
-    components:{
-        //youTube,
-        //twitter,
-        //instagram,
-        //linkedin
-    },
+    // components:{
+    //     youTube,
+    //     twitter,
+    //     instagram,
+    //     linkedin
+    // },
     computed: {
         user() {
             return this.$store.state.user;
@@ -61,7 +62,7 @@ export default {
 footer {
     margin-top: auto;
     padding: 100px 25px;
-    background-color: #303030;
+    background-color: #52796f;
     .container {
         display: flex;
         flex-direction: column;
