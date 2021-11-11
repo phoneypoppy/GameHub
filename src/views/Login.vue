@@ -2,6 +2,7 @@
     <div class="form-wrap">
         <form class="login">
             <p>
+
             Back to <router-link :to="{ name: 'Home' }">Home page</router-link>
             </p>
             <p class="login-register">
