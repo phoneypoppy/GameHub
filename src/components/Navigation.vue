@@ -1,13 +1,13 @@
 <template>
   <header>
     <nav class="container">
-       <div class="branding">
+      <div class="branding">
                 <router-link  :to="{ name: 'Home' }" class="header"><!--img src="..\GameHub\src\assets\logo.jpg"-->GameHub</router-link>
             </div>
       <div class="nav-links">
         <ul v-show="!mobile">
           <router-link class="link" :to="{ name: 'Home' }">Home</router-link>
-          <router-link class="link" :to="{ name: 'Blogs' }">Games</router-link>
+          <router-link class="link" :to="{ name: 'Posts' }">Posts</router-link>
           <router-link v-if="user" class="link" :to="{ name: 'CreatePost' }">Create Post</router-link>
           <router-link v-if="!user" class="link" :to="{ name: 'Login' }">Login/Register</router-link>
         </ul>
@@ -42,7 +42,7 @@
     <transition name="mobile-nav">
       <ul class="mobile-nav" v-show="mobileNav">
         <router-link class="link" :to="{ name: 'Home' }">Home</router-link>
-        <router-link class="link" :to="{ name: 'Blogs' }">Games</router-link>
+        <router-link class="link" :to="{ name: 'Posts' }">Posts</router-link>
         <router-link v-if="user" class="link" :to="{ name: 'CreatePost' }">Create Post</router-link>
         <router-link v-if="!user" class="link" :to="{ name: 'Login' }">Login/Register</router-link>
       </ul>

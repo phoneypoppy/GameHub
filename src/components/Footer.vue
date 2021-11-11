@@ -4,7 +4,7 @@
             <div class="left">
                 <div class="col-1">
                     <router-link class="header" :to="{name:'Home'}">GameHub</router-link>
-                    <!-- <ul>
+                    <ul>
                         <li> 
                             <a href="#"><youTube class="svg-icon"/></a>
                         </li> 
@@ -17,12 +17,12 @@
                         <li> 
                             <a href="#"><linkedin class="svg-icon"/></a>
                         </li> 
-                    </ul>  -->
+                    </ul> 
                 </div>
                 <div class="col-2">
                     <ul>
                         <router-link class="link" :to="{name : 'Home' }">Home</router-link> 
-                        <router-link class="link" :to="{name : 'Blogs' }">Blogs </router-link> 
+                        <router-link class="link" :to="{name : 'Posts' }">Posts </router-link> 
                         <router-link v-if="user" class="link" to="#">Create Post</router-link> 
                         <router-link v-if="!user" class="link" :to="{name : 'Login' }">Login / register </router-link>
 
@@ -37,19 +37,19 @@
 </template>
 
 <script>
-/*import youTube from "../assets/Icons/youtube-brands.svg";
+import youTube from "../assets/Icons/youtube-brands.svg";
 import twitter from "../assets/Icons/twitter-brands.svg";
 import instagram from "../assets/Icons/instagram-brands.svg";
-import linkedin from "../assets/Icons/linkedin-brands.svg";*/
+import linkedin from "../assets/Icons/linkedin-brands.svg";
 
 export default {
     name : "footer-vue",
-    // components:{
-    //     youTube,
-    //     twitter,
-    //     instagram,
-    //     linkedin
-    // },
+    components:{
+        youTube,
+        twitter,
+        instagram,
+        linkedin
+    },
     computed: {
         user() {
             return this.$store.state.user;

@@ -4,7 +4,7 @@
   <Searchbar/>
   <div class="blog-card-wrap">
     <div class="blog-cards">    
-      <BlogCard :post="post" v-for="(post, index) in blogPosts" :key="index" />
+      <BlogCard :post="post" v-for="(post, index) in Posts" :key="index" />
     </div>
   </div>
   </div>
@@ -14,11 +14,11 @@
 import BlogCard from "../components/BlogCard";
 import Searchbar from "../components/Searchbar";
 export default {
-  name: "blogs",
+  name: "posts",
   components: { BlogCard, Searchbar },
   computed: {
-    blogPosts() {
-      return this.$store.state.blogPosts;
+    Posts() {
+      return this.$store.state.Posts;
     },
   },
 };
