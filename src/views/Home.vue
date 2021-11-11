@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <BlogPost v-if="!user" :post="welcomeScreen" />
-    <BlogPost :post="post" v-for="(post, index) in blogPostsFeed" :key="index" /> 
+    <Post v-if="!user" :post="welcomeScreen" />
+    <Post :post="post" v-for="(post, index) in blogPostsFeed" :key="index" /> 
     <div class="blog-card-wrap">
       <div class="container">
         <h3>View More Recent games</h3>
@@ -20,12 +20,12 @@
 </template>
 
 <script>
-import BlogPost from "../components/BlogPost";
+import Post from "../components/Post";
 import BlogCard from "../components/BlogCard";
 import Arrow from "../assets/Icons/arrow-right-light.svg";
 export default {
   name: "Home",
-  components: { BlogPost, BlogCard, Arrow },
+  components: { Post, BlogCard, Arrow },
   data() {
     return {
       welcomeScreen: {
