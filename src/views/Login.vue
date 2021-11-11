@@ -1,7 +1,7 @@
 <template>
     <div class="form-wrap">
         <form class="login">
-            <router-link :to="{ name: 'Home' }">Back</router-link>
+            <router-link class="link" :to="{ name: 'Home' }">Back</router-link>
             <p class="login-register">
                 Don't have an account?
                 <router-link class="router-link" :to="{name: 'Register' }">Register</router-link>
