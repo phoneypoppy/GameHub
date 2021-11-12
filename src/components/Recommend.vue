@@ -1,12 +1,16 @@
 <template>
     <div>
+        <br>
         <h1 v-if="gotd" id="gotd">Game of the Day</h1>
+        <br>
         <div class="pic">
             <img id="image" />
             <span class="imgtext">
                 <h1 id="title"></h1>
+                <br>
                 <p id="description"></p>
                 <div id="link-container">
+                <br>
                 <a id="link">Visit Now!</a>
                 </div>
             </span>
@@ -85,10 +89,10 @@ export default {
 
 <style lang="scss" scoped>
 div {
+
     h1 {
         margin-top: 1%;
         text-align: center;
-        
     }
 
     .center {
@@ -99,6 +103,7 @@ div {
 
         button {
             font-size: 2vw;
+            background-color: #354f52;
         }
     }
 }
