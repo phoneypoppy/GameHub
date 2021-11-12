@@ -1,6 +1,8 @@
 <template>
   <div class="home">
+    <div class="recommend">
     <Recommend />
+    </div>
     <Post v-if="!user" :post="welcomeScreen" />
     <Post :post="post" v-for="(post, index) in blogPostsFeed" :key="index" /> 
     <div class="blog-card-wrap">
@@ -62,7 +64,12 @@ export default {
   }
 }
 
-
+.recommend{
+  padding-right: 8%;
+  padding-left: 8%;
+  padding-bottom: 3%;
+  background-color: #EAF4F4;
+}
 .updates {
   .container {
     padding: 100px 25px;

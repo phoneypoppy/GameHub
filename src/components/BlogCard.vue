@@ -1,13 +1,13 @@
 <template>
   <div class="blog-card">
-    <div v-show="editPost" class="icons">
+    <!-- <div v-show="editPost" class="icons">
       <div @click="editBlog" class="icon">
         <Edit class="edit" />
       </div>
       <div @click="deletePost" class="icon">
         <Delete class="delete" />
       </div>
-    </div>
+    </div> -->
     <img :src="post.blogCoverPhoto" alt="" />
     <div class="info">
       <h4>{{ post.blogTitle }}</h4>
