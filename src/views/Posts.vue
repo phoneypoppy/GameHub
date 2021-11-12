@@ -3,9 +3,10 @@
 
 
   <div class="blog-card-wrap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <form>
     <input v-model="search" type="text">
-    <button @click.prevent="update()" type="submit">submit</button>
+    <button @click.prevent="update()" type="submit"><i class="fa fa-search"></i></button>
   </form>
     <div class="blog-cards">
       <BlogCard :post="post" v-for="(post, index) in Posts"  :key="index" />
