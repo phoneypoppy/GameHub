@@ -48,6 +48,7 @@ export default {
     flex-direction: row;
   }
   .blog-content {
+    background-color: #88aa99;
     display: flex;
     flex-direction: column;
     justify-content: center;
