@@ -103,7 +103,7 @@ div {
 
         button {
             font-size: 2vw;
-            background-color: #354f52;
+            background-color: #073B4C;
         }
     }
 }

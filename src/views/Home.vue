@@ -88,7 +88,7 @@ export default {
       @media (min-width: 800px) {
         margin-left: auto;
       }
-      background-color: #073b4c;
+      background-color: #073B4C;
     }
 
     h2 {
