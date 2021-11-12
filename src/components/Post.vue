@@ -103,7 +103,7 @@ export default {
       }
       .link-light {
         &:hover {
-          border-bottom-color: #ffff;
+          border-bottom-color: #303030;
         }
       }
     }
