@@ -7,7 +7,7 @@
                 <p><span>Error:</span>{{ this.errorMsg}}</p>
             </div>
             <div class="blog-info">
-                <input type="text" placeholder="Enter Blog Title" v-model="blogTitle">
+                <input type="text" placeholder="Enter Post Title" v-model="blogTitle">
                 <div class="upload-file">
                     <label for="blog-photo">Upload Cover Photo</label>
                     <input type="file" ref="blogPhoto" id="blog-photo" @change="fileChange" accept=".png, .jpg, .jpeg"/>
@@ -21,7 +21,7 @@
                 <vue-editor :editorOptions="editorSettings" v-model="blogHTML" useCustomHandler @image-added="imageHandler"/>
             </div>
             <div class="blog-actions">
-                <button @click="uploadBlog">Publish Blog</button>
+                <button @click="uploadBlog">Publish Post</button>
                 <router-link class="router-button" :to="{name: 'BlogPreview'}">Post Preview</router-link>
             </div>
         </div>
@@ -129,7 +129,7 @@ export default {
         return;
       }
       this.error = true;
-      this.errorMsg = "Please ensure Blog Title & Blog Post has been filled!";
+      this.errorMsg = "Please ensure Title & Post Content has been filled!";
       setTimeout(() => {
         this.error = false;
       }, 5000);
