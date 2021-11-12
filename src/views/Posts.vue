@@ -32,7 +32,8 @@ export default {
       if( this.copy === ""){
         return this.$store.state.blogPosts
       }
-      return this.$store.state.blogPosts.filter(post=> post.blogTitle == this.copy);
+
+      return this.$store.state.blogPosts.filter(post=> post.blogTitle.toLowerCase().includes(this.copy.toLowerCase()) || this.copy.toLowerCase().includes(post.blogTitle.toLowerCase()) );
     },
   },
   methods: {
