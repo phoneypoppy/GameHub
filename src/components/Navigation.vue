@@ -2,7 +2,7 @@
   <header>
     <nav class="container">
       <div class="branding">
-                <router-link  :to="{ name: 'Home' }" class="header"><!--img src="..\GameHub\src\assets\logo.jpg"-->GameHub</router-link>
+                <router-link  :to="{ name: 'Home' }" class="header"><img style="width: 107.7px; height: 48px;" src="../assets/logo.jpg"/></router-link>
             </div>
       <div class="nav-links">
         <ul v-show="!mobile">
@@ -63,6 +63,7 @@ export default {
     menuIcon,
     userIcon,
     signOutIcon,
+    
   },
   data() {
     return {
@@ -135,6 +136,8 @@ header {
     .branding {
       display: flex;
       align-items: center;
+      height: 30px;
+
 
       .header {
         font-weight: 600;
