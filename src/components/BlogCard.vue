@@ -100,13 +100,13 @@ export default {
 
     h4 {
       padding-bottom: 8px;
-      font-size: 20px;
-      font-weight: 300;
+      font-size: 28px;
+      font-weight: 400;
     }
 
     h6 {
       font-weight: 400;
-      font-size: 12px;
+      font-size: 15px;
       padding-bottom: 16px;
     }
 
