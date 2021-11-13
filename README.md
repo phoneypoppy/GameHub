@@ -1,9 +1,5 @@
 # GameHub
 
-step by step instructions of:
-a) how to set up your application based on the submitted file(s)
-b) how to run your application
-
 ## Project setup
 ```
 npm install
