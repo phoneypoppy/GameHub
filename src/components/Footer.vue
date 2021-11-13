@@ -14,9 +14,7 @@
                         <li> 
                             <a href="#"><instagram class="svg-icon"/></a>
                         </li> 
-                        <li> 
-                            <a href="#"><linkedin class="svg-icon"/></a>
-                        </li> 
+                        
                     </ul> 
                 </div>
                 <div class="col-2">
@@ -40,7 +38,7 @@
 import youTube from "../assets/Icons/youtube-brands.svg";
 import twitter from "../assets/Icons/twitter-brands.svg";
 import instagram from "../assets/Icons/instagram-brands.svg";
-import linkedin from "../assets/Icons/linkedin-brands.svg";
+
 
 export default {
     name : "footer-vue",
@@ -48,7 +46,7 @@ export default {
         youTube,
         twitter,
         instagram,
-        linkedin
+        
     },
     computed: {
         user() {
