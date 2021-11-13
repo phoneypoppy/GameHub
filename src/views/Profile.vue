@@ -119,25 +119,6 @@ export default {
             border-radius: 50%;
         }
 
-        // .admin-badge {
-        //     display: flex;
-        //     align-self: center;
-        //     color: #fff;
-        //     font-size: 14px;
-        //     padding: 8px 24px;
-        //     border-radius: 8px;
-        //     background-color: #303030;
-        //     margin: 16px 0;
-        //     text-align: center;
-        //     text-transform: capitalize;
-
-        //     .icon {
-        //     width: 14px;
-        //     height: auto;
-        //     margin-right: 8px;
-        //     }
-        // }
-
         .input {
             margin: 16px 0;
 
