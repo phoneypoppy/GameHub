@@ -6,13 +6,13 @@
                     <router-link class="header" :to="{name:'Home'}">GameHub</router-link>
                     <ul>
                         <li> 
-                            <a href="#"><youTube class="svg-icon"/></a>
+                            <a href="https://www.youtube.com/channel/UCfVvh9PkCNsfqi3qVeuevlg"><youTube class="svg-icon"/></a>
                         </li> 
                         <li> 
-                            <a href="#"><twitter class="svg-icon"/></a>
+                            <a href="https://twitter.com/gamehub"><twitter class="svg-icon"/></a>
                         </li> 
                         <li> 
-                            <a href="#"><instagram class="svg-icon"/></a>
+                            <a href="https://www.instagram.com/ghostfake1450/"><instagram class="svg-icon"/></a>
                         </li> 
                         
                     </ul> 
