@@ -11,7 +11,9 @@ npm run serve
 
 ## Hosted Application
 
-[wad2-9d010.web.app](wad2-9d010.web.app)
+> [wad2-9d010.web.app](wad2-9d010.web.app)
+> 
+> alternative: [wad2-9d010.firebaseapp.com](wad2-9d010.firebaseapp.com)
  
  ## Username/Password details
  - You may choose to create your own account from the register page or use 
@@ -20,6 +22,6 @@ npm run serve
 >
 >Password: qwerty
 
-## credits
-Project Referenced from: [6 Hour Vue.js & Firebase Project - FireBlogs](https://youtu.be/ISv22NNL-aE)
+## Credits
+Project Referenced from: [6 Hour Vue.js & Firebase Project](https://youtu.be/ISv22NNL-aE)
 
