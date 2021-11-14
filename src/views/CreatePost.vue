@@ -22,7 +22,6 @@
             </div>
             <div class="blog-actions">
                 <button @click="uploadBlog">Publish Post</button>
-                <router-link class="router-button" :to="{name: 'BlogPreview'}">Post Preview</router-link>
             </div>
         </div>
     </div>

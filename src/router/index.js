@@ -7,7 +7,6 @@ import Register from "../views/Register.vue";
 import ForgotPassword from "../views/ForgotPassword.vue";
 import Profile from "../views/Profile.vue";
 import CreatePost from "../views/CreatePost.vue";
-import BlogPreview from "../views/BlogPreview.vue";
 import ViewBlog from "../views/ViewBlog.vue";
 import firebase from "firebase/app";
 import "firebase/auth";
@@ -75,15 +74,6 @@ const routes = [
     component: CreatePost,
     meta: {
       title: "Create Post",
-      requiresAuth: true,
-    },
-  },
-  {
-    path: "/post-preview",
-    name: "BlogPreview",
-    component: BlogPreview,
-    meta: {
-      title: "Preview Blog Post",
       requiresAuth: true,
     },
   },
