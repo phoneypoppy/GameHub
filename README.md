@@ -13,7 +13,7 @@ npm run serve
 
 > [wad2-9d010.web.app ](https://wad2-9d010.web.app/)
 > 
-> [alternative: wad2-9d010.firebaseapp.com](https://wad2-9d010.firebaseapp.com/)
+> alternative: [wad2-9d010.firebaseapp.com](https://wad2-9d010.firebaseapp.com/)
  
  ## Username/Password details
  - You may choose to create your own account from the register page or use 
